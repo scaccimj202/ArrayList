@@ -62,7 +62,7 @@
     }
 
     /**
-     * Method removes the current element from the ArrayList and returns is
+     * Method removes the current element from the ArrayList and returns it
      * @return current element
      */
     public E remove(){
@@ -73,6 +73,37 @@
             listArray[i] = listArray[i+1];
         listSize--;
         return element;
+    }
+    /**
+     * Method moves the current position to the start of the ArrayList
+     */
+    public void moveToStart(){
+        currentPosition = 0;
+    }
+
+    /**
+     * Method moves the current position to the end of the ArrayList 
+     */
+    public void moveToEnd(){
+        currentPosition = listSize;
+    }
+
+    /**
+     * Method moves the current position to one to the left, provided the 
+     * current position is not 0.
+     */
+    public void prev(){
+        if(currentPosition != 0)
+            currentPosition--;
+    }
+
+    /**
+     * Method moves the current position one to the right provided
+     * the current position is less than the size of the list.
+     */
+    public void next(){
+        if(currentPosition != listSize)
+            currentPosition++;
     }
 }
     
