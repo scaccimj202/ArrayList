@@ -60,5 +60,19 @@
         assert listSize < maxSize : "List capacity exceeded";
         listArray[listSize++] = element;
     }
+
+    /**
+     * Method removes the current element from the ArrayList and returns is
+     * @return current element
+     */
+    public E remove(){
+        if((currentPosition < 0) || (currentPosition >= listSize))
+            return null;
+        E element = listArray[currentPosition];
+        for(int i = currentPosition; i < listSize-1; i++)
+            listArray[i] = listArray[i+1];
+        listSize--;
+        return element;
+    }
 }
     
