@@ -51,4 +51,14 @@
         listArray[currentPosition] = element;
         listSize++;
     }
+
+    /**
+     * Method appends the element to the ArrayList
+     * @param element the element to be appended to the ArrayList
+     */
+    public void append(E element){
+        assert listSize < maxSize : "List capacity exceeded";
+        listArray[listSize++] = element;
+    }
+}
     
