@@ -40,5 +40,15 @@
         listSize = currentPosition = 0;
     }
 
+    /**
+     * Method inserts element into ArrayList at current position.
+     * @param element the element to be inserted into the ArrayList
+     */
+    public void insert(E element){
+        assert listSize < maxSize : "List capacity exceeded";
+        for(int i = listSize; i>currentPosition; i--)
+            listArray[i] = listArray[i-1];
+        listArray[currentPosition] = element;
+        listSize++;
+    }
     
- }
