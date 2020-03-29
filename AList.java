@@ -105,5 +105,23 @@
         if(currentPosition != listSize)
             currentPosition++;
     }
+
+    /**
+     * Method returns the lenght of the ArrayList
+     * @return the length of the ArrayList
+     */
+    public int length(){
+        return listSize;
+    }
+
+    /**
+     * Method returns the current position in the ArrayList
+     * @return the current position in the ArrayList
+     */
+    public int currPos(){
+        return currentPosition;
+    }
+
+    
 }
     
