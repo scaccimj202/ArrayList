@@ -122,6 +122,23 @@
         return currentPosition;
     }
 
-    
+    /**
+     * Moves the current position to that passed by position
+     * @param position the position we wish to move to
+     */
+    public void moveToPos(int position){
+        assert (position >= 0) && (position <= listSize) : "Position out of range";
+        currentPosition = position;
+    }
+
+    /**
+     * Method returns the current value provided one exists.
+     * @return the element at the current position
+     */
+    public E getValue(){
+        assert (currentPosition >= 0) && (currentPosition < listSize) : 
+            "No current element";
+        return listArray[currentPosition];
+    }
 }
     
